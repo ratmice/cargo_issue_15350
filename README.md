@@ -33,3 +33,8 @@ cargo build
 cargo test
 cargo run -p runner
 ```
+
+
+#### Ideally
+
+Using `cargo run -p runner` would work that way we could avoid having to `cargo install`, to use a custom runner.

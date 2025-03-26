@@ -14,12 +14,22 @@ that doesn't require wasmtime or wasm32-wasip2 target installed.
 
 
 on wasm32-wasip2 where .cargo/config has the runner set to
-invoke `cargo run -p runner`
+invoke `cargo run -p runner` causing the following to fail.
 
 ```
 cargo test --target wasm32-wasip2
 
 ```
 
-removing the `cargo run` from the `config.toml`,
-and invoking the runner directly should succeed.
+Changing the `config.toml` to
+```
+[target.wasm32-wasip2]
+runner = "target/debug/runner"
+```
+
+Both should all succeed.
+```
+cargo build
+cargo test
+cargo -p runner
+``

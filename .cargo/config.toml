@@ -1,0 +1,7 @@
+[target.wasm32-wasip2]
+# cargo test --target wasm32-wasip2 assertion fails
+runner = "cargo run -p runner"
+
+# Switching the runner to run directly without cargo
+# and the test succeeds
+# runner = "target/debug/runner"

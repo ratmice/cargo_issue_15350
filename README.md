@@ -31,5 +31,5 @@ Both should all succeed.
 ```
 cargo build
 cargo test
-cargo -p runner
+cargo run -p runner
 ``

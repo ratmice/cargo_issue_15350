@@ -32,4 +32,4 @@ Both should all succeed.
 cargo build
 cargo test
 cargo run -p runner
-``
+```
